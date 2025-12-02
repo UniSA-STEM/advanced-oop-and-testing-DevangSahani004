@@ -26,3 +26,7 @@ print(savannah.report_status())   # show enclosure details
 print("\n--- Staff Actions ---")
 print(keeper.feed_animal(lion))   # keeper feeds the lion
 print(keeper.clean_enclosure(savannah))   # keeper cleans the enclosure
+
+print("\n--- Health Check ---")
+lion.add_health_record("Broken paw", "2025-12-02", "High", "Bandaged and resting")   # add a health issue
+print(vet.check_health(lion))   # vet checks the lion's health records
