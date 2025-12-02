@@ -34,3 +34,12 @@ def test_vet_health_check(lion):
     result = vet.check_health(lion)
     assert "Dr. Jane reviews health records of Leo" in result
     assert "Routine check-up" in result
+
+def test_remove_animal(savannah, lion):
+    savannah.add_animal(lion)
+    result = savannah.remove_animal("Leo")
+    assert "removed" in result
+    assert lion not in savannah.get_animals()
+    # Edge case: removing non-existent animal
+    result = savannah.remove_animal("Tiger")
+    assert "No animal named Tiger" in result
