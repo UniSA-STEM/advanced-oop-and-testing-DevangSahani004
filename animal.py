@@ -33,3 +33,18 @@ class Animal:
             "treatment": treatment_notes   # notes on treatment
         }
         self.__health_records.append(record)   # add the record to the list
+
+    def get_health_records(self):
+        return self.__health_records   # getter method to return all health records
+
+    def get_name(self):
+        return self.__name   # getter method to return the animal name (private attribute)
+
+    def get_species(self):
+        return self.__species   # getter method to return the species details
+
+    def get_age(self):
+        return self.__age   # getter method to return the age
+
+    def get_diet(self):
+        return self.__diet  # getter method to return the animal diet
