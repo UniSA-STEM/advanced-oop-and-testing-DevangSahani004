@@ -48,3 +48,10 @@ class Animal:
 
     def get_diet(self):
         return self.__diet  # getter method to return the animal diet
+
+    def is_under_treatment(self):
+        if self.__health_records:   # check if there are any records
+            latest = self.__health_records[-1]   # look at the most recent one
+            if "severity" in latest:   # make sure severity exists
+                return latest["severity"].lower() == "high"   # if severity is high, animal is under treatment
+        return False   # either there no records or aren't considered severe
