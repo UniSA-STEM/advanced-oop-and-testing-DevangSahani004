@@ -37,3 +37,18 @@ class Zookeeper(Staff):
 
     def clean_enclosure(self, enclosure):
         return f"{self.get_name()} cleans {enclosure.get_name()}."   # method for zookeeper to clean an enclosure
+
+class Veterinarian(Staff):
+    """represents a veterinarian, inherits from staff"""
+
+    def __init__(self, name):
+        super().__init__(name, "Veterinarian")   # call parent constructor with role set to veterinarian
+
+    def check_health(self, animal):
+        records = animal.get_health_records()   # get health records of a specific animal
+        if records:   # if there are records
+            latest = records[-1]   # look at the most recent one
+            return (f"{self.get_name()} reviews health records of {animal.get_name()}:\n"
+                    f"Issue: {latest['description']}, Date: {latest['date']}, "
+                    f"Severity: {latest['severity']}, Treatment: {latest['treatment']}")   # show details
+        return f"{self.get_name()} finds no health issues for {animal.get_name()}."   # if no records exist
