@@ -22,3 +22,7 @@ vet = Veterinarian("Dr. Jane")   # veterinarian staff member
 print("\n--- Zoo Setup ---")
 print(savannah.add_animal(lion))   # try adding the lion to the enclosure
 print(savannah.report_status())   # show enclosure details
+
+print("\n--- Staff Actions ---")
+print(keeper.feed_animal(lion))   # keeper feeds the lion
+print(keeper.clean_enclosure(savannah))   # keeper cleans the enclosure
