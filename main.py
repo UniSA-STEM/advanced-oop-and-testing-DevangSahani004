@@ -34,3 +34,7 @@ print(vet.check_health(lion))   # vet checks the lion's health records
 print("\n--- Enclosure Restriction ---")
 new_enclosure = Enclosure("Backup Enclosure", 300, "Savannah")   # another enclosure
 print(new_enclosure.add_animal(lion))   # shouldn't go through  because lion is under treatment
+
+print("\n--- Staff Assignment ---")
+print(keeper.assign_to_enclosure(savannah))   # assign keeper to the savannah enclosure
+print(f"{keeper.get_name()} is assigned to: {keeper.get_assignment().get_name()}")   # confirm assignment
