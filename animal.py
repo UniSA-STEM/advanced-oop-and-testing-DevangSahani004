@@ -55,3 +55,12 @@ class Animal:
             if "severity" in latest:   # make sure severity exists
                 return latest["severity"].lower() == "high"   # if severity is high, animal is under treatment
         return False   # either there no records or aren't considered severe
+
+    def get_health_report(self):
+        if not self.__health_records:   # only if no records exist
+            return f"No health records for {self.__name}"
+        report = f"Health report for {self.__name}: \n"   # report header
+        for record in self.__health_records:   # loop through each record before printing full report
+            report += (f"- Issue: {record['description']}, Date: {record['date']}, "
+                       f"Severity: {record['severity']}, Treatment: {record['treatment']}\n")
+        return report.strip()   # return the full report neatly
