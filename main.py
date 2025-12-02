@@ -19,6 +19,11 @@ savannah = Enclosure("Savannah Enclosure", 500, "Savannah")   # big savannah enc
 keeper = Zookeeper("Sam")   # zookeeper staff member
 vet = Veterinarian("Dr. Jane")   # veterinarian staff member
 
+print("|| Zoo Management System ||")
+print("--By ByteWise Consulting--")
+
+print("\n Welcome!")
+
 print("\n--- Zoo Setup ---")
 print(savannah.add_animal(lion))   # try adding the lion to the enclosure
 print(savannah.report_status())   # show enclosure details
