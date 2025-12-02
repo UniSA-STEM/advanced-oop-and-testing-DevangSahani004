@@ -21,3 +21,9 @@ def test_health_restriction(lion, savannah):
     result = savannah.add_animal(lion)
     assert "cannot be moved" in result
     assert lion not in savannah.get_animals()
+
+def test_staff_feed_and_clean(lion, savannah):
+    keeper = Zookeeper("Sam")
+    savannah.add_animal(lion)
+    assert "feeds Leo" in keeper.feed_animal(lion)
+    assert "cleans Savannah Enclosure" in keeper.clean_enclosure(savannah)
