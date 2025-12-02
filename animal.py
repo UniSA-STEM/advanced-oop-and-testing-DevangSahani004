@@ -64,3 +64,18 @@ class Animal:
             report += (f"- Issue: {record['description']}, Date: {record['date']}, "
                        f"Severity: {record['severity']}, Treatment: {record['treatment']}\n")
         return report.strip()   # return the full report neatly
+
+class Mammal(Animal):
+    """represents a mammal, overrides parent sound behavior"""
+    def make_sound(self):
+        return f"{self.get_name()} roars relentlessly!"   # mammals roar here
+
+class Bird(Animal):
+    """represents a bird, overrides parent sound behavior"""  # docstring
+    def make_sound(self):
+        return f"{self.get_name()} chirps peacefully..."   # birds chirp here
+
+class Reptile(Animal):
+    """represents a reptile, overrides parent sound behavior"""  # docstring
+    def make_sound(self):
+        return f"{self.get_name()} hisses effortlessly..."   # reptiles hiss here
