@@ -27,3 +27,10 @@ def test_staff_feed_and_clean(lion, savannah):
     savannah.add_animal(lion)
     assert "feeds Leo" in keeper.feed_animal(lion)
     assert "cleans Savannah Enclosure" in keeper.clean_enclosure(savannah)
+
+def test_vet_health_check(lion):
+    vet = Veterinarian("Dr. Jane")
+    lion.add_health_record("Routine check-up", "2025-12-03", "Low", "No issues found")
+    result = vet.check_health(lion)
+    assert "Dr. Jane reviews health records of Leo" in result
+    assert "Routine check-up" in result
