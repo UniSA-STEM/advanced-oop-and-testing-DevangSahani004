@@ -1,8 +1,20 @@
 '''
-File: filename.py
-Description: A brief description of this Python module.
-Author: Billy Bizilis
-ID: 110100110
-Username: bizvy001
+File: main.py
+Description: Script to demo the program that ties everything together, showing animals, enclosures, staff actions, and health reports.
+Author: Devang Sahani
+ID: 110411585
+Username: sahdy004
 This is my own work as defined by the University's Academic Integrity Policy.
-''
+'''
+
+from animal import Mammal
+from enclosure import Enclosure
+from staff import Zookeeper, Veterinarian
+
+"""simple demo script to show how the zoo system works"""
+
+# create the main objects we need
+lion = Mammal("Leo", "Lion", 5, "Carnivore")   # a lion named leo
+savannah = Enclosure("Savannah Enclosure", 500, "Savannah")   # big savannah enclosure
+keeper = Zookeeper("Sam")   # zookeeper staff member
+vet = Veterinarian("Dr. Jane")   # veterinarian staff member
