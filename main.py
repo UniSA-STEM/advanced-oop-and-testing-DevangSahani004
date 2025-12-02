@@ -30,3 +30,7 @@ print(keeper.clean_enclosure(savannah))   # keeper cleans the enclosure
 print("\n--- Health Check ---")
 lion.add_health_record("Broken paw", "2025-12-02", "High", "Bandaged and resting")   # add a health issue
 print(vet.check_health(lion))   # vet checks the lion's health records
+
+print("\n--- Enclosure Restriction ---")
+new_enclosure = Enclosure("Backup Enclosure", 300, "Savannah")   # another enclosure
+print(new_enclosure.add_animal(lion))   # shouldn't go through  because lion is under treatment
