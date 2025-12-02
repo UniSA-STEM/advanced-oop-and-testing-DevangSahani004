@@ -26,3 +26,14 @@ class Staff:
 
     def get_assignment(self):
         return self.__assigned   # getter method to return the enclosure details the staff is assigned to
+
+class Zookeeper(Staff):
+    """represents a zookeeper, inherits from staff"""
+    def __init__(self, name):
+        super().__init__(name, "Zookeeper")   # call parent constructor with role set to zookeeper
+
+    def feed_animal(self, animal):
+        return f"{self.get_name()} feeds {animal.get_name()}."   # method for zookeeper to feed an animal
+
+    def clean_enclosure(self, enclosure):
+        return f"{self.get_name()} cleans {enclosure.get_name()}."   # method for zookeeper to clean an enclosure
