@@ -18,3 +18,5 @@ lion = Mammal("Leo", "Lion", 5, "Carnivore")   # a lion named leo
 savannah = Enclosure("Savannah Enclosure", 500, "Savannah")   # big savannah enclosure
 keeper = Zookeeper("Sam")   # zookeeper staff member
 vet = Veterinarian("Dr. Jane")   # veterinarian staff member
+print(savannah.add_animal(lion))   # try adding the lion to the enclosure
+print(savannah.report_status())   # show enclosure details
