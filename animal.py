@@ -14,3 +14,12 @@ class Animal:
         self.__species = species   # species type
         self.__age = age   # age of the animal
         self.__diet = diet   # diet type
+
+    def eat(self):
+        return f"{self.__name} is eating according to {self.__diet} diet."
+
+    def sleep(self):
+        return f"{self.__name} is sleeping."
+
+    def make_sound(self):
+        return f"{self.__name} makes a sound."
