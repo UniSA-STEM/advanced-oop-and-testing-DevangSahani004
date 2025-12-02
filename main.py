@@ -38,3 +38,11 @@ print(new_enclosure.add_animal(lion))   # shouldn't go through  because lion is 
 print("\n--- Staff Assignment ---")
 print(keeper.assign_to_enclosure(savannah))   # assign keeper to the savannah enclosure
 print(f"{keeper.get_name()} is assigned to: {keeper.get_assignment().get_name()}")   # confirm assignment
+
+# various different health records for testing purposes
+lion.add_health_record("Routine check-up", "2025-12-03", "Low", "No issues found")
+print(lion.get_health_report())
+lion.add_health_record("Routine check-up", "2025-11-28", "Medium", "Unsure. Requires specialist.")
+print(lion.get_health_report())
+lion.add_health_record("Treatment", "2025-11-30", "High", "Requires urgent surgery.")
+print(lion.get_health_report())   # print full health report
