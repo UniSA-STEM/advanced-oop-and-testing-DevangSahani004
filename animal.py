@@ -1,8 +1,16 @@
 '''
-File: filename.py
-Description: A brief description of this Python module.
-Author: Billy Bizilis
-ID: 110100110
-Username: bizvy001
+File: animal.py
+Description: Defines animals with attributes, behaviors, and health records, plus child classes for sound differences.
+Author: Devang Sahani
+ID: 110411585
+Username: sahdy004
 This is my own work as defined by the University's Academic Integrity Policy.
-''
+'''
+
+class Animal:
+    """represents a generic animal"""
+    def __init__(self, name, species, age, diet):
+        self.__name = name   # private name
+        self.__species = species   # species type
+        self.__age = age   # age of the animal
+        self.__diet = diet   # diet type
