@@ -10,3 +10,8 @@ def lion():
 @pytest.fixture
 def savannah():
     return Enclosure("Savannah Enclosure", 500, "Savannah")
+
+def test_add_animal_success(lion, savannah):
+    result = savannah.add_animal(lion)
+    assert "Leo added" in result
+    assert lion in savannah.get_animals()
